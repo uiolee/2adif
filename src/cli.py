@@ -17,7 +17,12 @@ class Args(argparse.Namespace):
 def cli():
     parser = argparse.ArgumentParser(prog="2adif")
 
-    parser.add_argument("path", nargs="+", type=Path)
+    parser.add_argument(
+        "path",
+        nargs="+",
+        type=Path,
+        help="the .csv file(s) that you want to convert to .adi",
+    )
 
     args: Args = parser.parse_args(namespace=Args())
 
