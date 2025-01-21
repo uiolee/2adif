@@ -2,4 +2,4 @@
 
 echo "python: " $(python --version)
 echo "pipx  : " $(pipx --version)
-pipx run --spec . 2adif ./test/ 
+pipx run --python python"$python_version" --spec . 2adif ./test/ 
