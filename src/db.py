@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import Union
 
 from scrapy import Field as sField
 from scrapy import Item as sItem
@@ -43,7 +44,7 @@ class ItemContainer:
         for item in data:
             yield item
 
-    def contains(self, obj: str | Item) -> bool:
+    def contains(self, obj: Union[str, Item]) -> bool:
         data = self.data
         if isinstance(obj, Item):
             key = obj["name"]
@@ -54,7 +55,7 @@ class ItemContainer:
                 return True
         return False
 
-    def get(self, obj: str | Item):
+    def get(self, obj: Union[str, Item]):
         if not self.contains(obj):
             raise Exception("doesn't exists!")
         else:
