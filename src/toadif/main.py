@@ -1,10 +1,10 @@
 import csv
 from pathlib import Path
 
-from db import Item, ItemContainer
-from fields import HEADER_FIELDS_NAME, QSOS_FIELDS_NAME
-from info import _i
-from time_helper import convert_to_hhmmss, convert_to_yyyymmdd, get_ymdhms
+from .db import Item, ItemContainer
+from .fields import HEADER_FIELDS_NAME, QSOS_FIELDS_NAME
+from .info import _i
+from .time_helper import convert_to_hhmmss, convert_to_yyyymmdd, get_ymdhms
 
 
 class TO_ADIF:
@@ -96,7 +96,7 @@ class TO_ADIF:
 
     def _gen_adif_header(self):
         _d = _i()
-        head_slist = ["# Exported By 2ADIF."]
+        head_slist = ["# Exported By 2adif."]
         header_item = [
             Item(name="ADIF_VER", value=_d("ADIF_VER")),
             Item(name="CREATED_TIMESTAMP", value=get_ymdhms()),

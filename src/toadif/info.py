@@ -2,12 +2,12 @@ def _i():
     def _k():
         return {
             "name": "2adif",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "description": "Converts CSV to ADIF",
             "author": "uiolee",
             "ADIF_VER": "3.1.5",
             "PROGRAMID": "uiolee-2adif",
-            "PROGRAMVERSION": "0.1.0",
+            "PROGRAMVERSION": "0.2.0",
         }
 
     i = _k()

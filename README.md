@@ -8,8 +8,6 @@ Convert tables to [ADIF](https://adif.org/) format.
 ## Feat
 
 - [x] convert `csv` to `adi` format.
-- [ ] convert `xlsx` to `adi` format.
-- [ ] convert `ods` to `adi` format.
 
 ## Usage
 
@@ -21,41 +19,18 @@ Convert tables to [ADIF](https://adif.org/) format.
 [![PyPI - License](https://img.shields.io/pypi/l/2adif)](./LICENSE)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/2adif)](https://pypi.org/p/2adif)
 
-### pipx
+### Installation via `uv`
 
-#### Install
-
-```bash
-pipx install 2adif
+```sh
+uv tool install 2adif
 ```
 
-#### convert `csv` to `adi`
+```sh
+2adif -h
+```
 
-- Convert the specified `csv` file
+### Examples
 
-  ```bash
-  2adif ./test/test.csv
-  ```
-
-- Convert all csv files in the specified directory
-
-  ```bash
-  2adif ./test/
-  ```
-
-### source
-
-<details>
-<summary>source</summary>
-
-#### Python
-
-see [./src/main.py](./src/main.py#L140) for more.
-
-</details>
-
-## Develop Env
-
-```plain
-Python 3.11.9
+```sh
+2adif ./test/
 ```

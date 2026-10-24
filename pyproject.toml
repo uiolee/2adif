@@ -1,10 +1,16 @@
 [project]
 name = "2adif"
-authors = [{ name = "uiolee" }]
-maintainers = [{ name = "uiolee" }]
+version = "0.2.0.dev1"
 description = "Convert table to ADIF format."
-keywords = ["ADIF", "csv", "hamradio"]
 readme = "README.md"
+authors = [
+    { name = "uiolee" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "scrapy>=2.19.0",
+]
+keywords = ["ADIF", "csv", "hamradio"]
 license = { text = "MPL 2.0" }
 
 classifiers = [
@@ -18,32 +24,25 @@ classifiers = [
     "Topic :: File Formats",
     "Topic :: Utilities",
 
-    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
-
     "Natural Language :: English",
 
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
 
-    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.15",
 ]
 
-dynamic = ["version"]
-
-dependencies = ['Scrapy']
-
 [project.urls]
-Homepage = "https://github.com/uiolee/2adif"
-Repository = "https://github.com/uiolee/2adif.git"
-Issues = "https://github.com/uiolee/2adif/issues"
+source = "https://github.com/uiolee/2adif.git"
+issues = "https://github.com/uiolee/2adif/issues"
 
 [project.scripts]
-2adif = "cli:cli"
+2adif = "toadif:cli.cli"
 
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm>=8"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
 
-[tool.setuptools_scm]
-local_scheme = 'no-local-version'
+[tool.uv.build-backend]
+module-name = ["toadif"]

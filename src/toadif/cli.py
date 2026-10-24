@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 
-from main import TO_ADIF
+from .main import TO_ADIF
 
 
 def _do(path: Path):
