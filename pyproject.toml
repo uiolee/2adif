@@ -1,6 +1,6 @@
 [project]
 name = "2adif"
-version = "0.2.0.dev1"
+version = "0.2.1"
 description = "Convert table to ADIF format."
 readme = "README.md"
 authors = [
